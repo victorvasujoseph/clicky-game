@@ -2,15 +2,17 @@ import React from "react";
 import "./Body.css";
 
 function Body(props) {
-    return (
-        <div>
-            <div className="container-fluid">
-                <div className="header-row row d-flex justify-content-center align-items-center">
-                    <button > Click Me !! </button>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <div className="container">
+          {props.images.map(value => {
+              return (
+                  <img className="imageCard" key={value.id} src={value.image} alt={value.image} onClick={() => props.imageClickHandler(value.id)}/>
+              );
+          })}
+      </div>
+    </div>
+  );
 }
 
 export default Body;

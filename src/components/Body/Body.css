@@ -1,0 +1,10 @@
+.imageCard{
+    width: 250px;
+    height: 250px;
+    margin:5px;
+
+}
+.imageCard:hover{
+    border: 1px grey solid;
+    transform: scale(1.1);
+}
