@@ -33,6 +33,13 @@ class App extends Component {
           score: prevState.score + 1
         };
       });
+
+      this.setState(prevState => {
+        return {
+          imageList: this.shuffle(images)
+        };
+      });
+      
     } else {
       this.topScoreChecker();
       console.log("You have clicked this image already");
@@ -46,7 +53,7 @@ class App extends Component {
   };
 
   // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
-  
+
   shuffle = a => {
     var j, x, i;
     for (i = a.length - 1; i > 0; i--) {
