@@ -24,19 +24,9 @@ class App extends Component {
 
       this.setState(prevState => {
         return {
-          message: ""
-        };
-      });
-
-      this.setState(prevState => {
-        return {
+          message: "",
+          imageList: this.shuffle(images),
           score: prevState.score + 1
-        };
-      });
-
-      this.setState(prevState => {
-        return {
-          imageList: this.shuffle(images)
         };
       });
       
